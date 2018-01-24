@@ -1,4 +1,42 @@
+@import "fonts";
+@import "mixins";
+@import "vars";
+
 body {
-  font-size: 100px;
-  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+  background-color: #283645;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  min-height: 100px;
+  background-color: red;
+  @include mq($tablet) {
+    width: 620px;
+  }
+  @include mq($mobile) {
+    width: 100%;
+  }
+}
+
+.pageHeader {
+  min-height: 854px;
+  background: url("../img/back-desktop.jpg"),
+              url("../img/iphone-6.png") /*no-repeat center top*/ ;
+  @include mq($tablet) {
+    min-height: 729px;
+  }
+}
+
+.maiNav {
+  min-height: 110px;
+  background-color: rgba(0, 0, 0, 0.3);
 }

@@ -1,0 +1,12 @@
+@mixin mq ($width...) {
+  @if length($width) == 1 {
+    @media screen and (max-width: nth($width, 1)) {
+      @content
+    }
+  }
+  @if length($width) == 2 {
+    @media screen and (max-width: nth($width, 1)) and (min-width: nth($width, 2)){
+      @content
+    }
+  }
+}
