@@ -30,14 +30,21 @@ img {
 
 .pageHeader {
   min-height: 854px;
-  background: url(../img/back-desktop.jpg) no-repeat top center;
-              /*url(../img/iphone-6.png) !*no-repeat center top*!*/;
+  background: url("../img/iphone-6.png") no-repeat bottom center,
+  url(../img/back-desktop.jpg) no-repeat top center;
   @include mq($tablet) {
     min-height: 729px;
+    background-size: 800px, auto;
   }
+  @include mq($mobile) {
+    min-height: 466px;
+    background-position: -180px 130px, center;
+    background-size: 600px, auto;
+  }
+
 }
 
-.pageHeader .container {
+/*.pageHeader .container {
   min-height: inherit;
   background: url("../img/iphone-6.png") no-repeat bottom center;
   background-size: 100%;
@@ -48,7 +55,8 @@ img {
     background-position: -200px bottom;
     background-size: 800px;
   }
-}
+}*/
+
 
 .maiNav {
   min-height: 110px;
